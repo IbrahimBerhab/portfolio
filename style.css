@@ -26,15 +26,30 @@ header{
     font-weight: 700;
     font-size: 1.8em;
 }
-.navigation a{
+.navigation a {
     color: #3a6cf4;
     text-decoration: none;
     font-size: 1.1em;
     font-weight: 500;
     padding-left: 30px;
+    position: relative;
 }
-.navigation a:hover {
-    color: #601cfc;
+
+/* الخط المخفي */
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #601cfc;
+    transition: 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navigation a:hover::after {
+    width: 100%;
 }
 section{
     padding: 100px 200px;
