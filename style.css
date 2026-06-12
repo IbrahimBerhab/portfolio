@@ -33,9 +33,10 @@ header{
     font-weight: 500;
     padding-left: 30px;
     position: relative;
+    display: inline-block;
 }
 
-/* الخط المخفي */
+/* الخط */
 .navigation a::after {
     content: "";
     position: absolute;
@@ -47,6 +48,7 @@ header{
     transition: 0.3s ease;
     transform: translateX(-50%);
 }
+
 .navigation a:hover::after {
     width: 100%;
 }
